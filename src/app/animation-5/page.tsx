@@ -19,7 +19,7 @@ function Page() {
 
         items.current.forEach((item, index) => {
             tl.to(item, {
-                duration: 0.4,
+                duration: 0.6,
                 css: { top: "50vh", right: `calc(50vw - 50px)`, opacity: 1 },
                 ease: Power2.easeOut,
             })
@@ -37,7 +37,7 @@ function Page() {
                 ease: Power3.easeOut,
             })
             .to(item, {
-                duration: 1,
+                duration: 1.2,
                 scale: 0.5, 
                 x: () => gsap.utils.random(-40, 40) + 'vw', 
                 y: () => gsap.utils.random(-30, 30) + 'vh', 
@@ -55,7 +55,7 @@ function Page() {
             {[...Array(8)].map((_, index) => (
                 <div
                     key={index}
-                    className={`rotate-[45deg] absolute bottom-[110vh] right-[50vw-px] w-[100px] h-[100px]`}
+                    className={`rotate-[45deg] absolute bottom-[110vh] right-[50vw-50px] w-[100px] h-[100px]`}
                     style={{ backgroundColor: `hsl(${index * 72}, 100%, 50%)` }} 
                     ref={addToRefs}
                 ></div>
